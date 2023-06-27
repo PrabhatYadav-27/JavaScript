@@ -144,13 +144,37 @@ function greeting(name) {
 
   //arrow function
 
-const add = (first,second)=>{
-    return first + second ;
-};
- console.log(add(2,8));
+// const add = (first,second)=>{
+//     return first + second ;
+// };
+//  console.log(add(2,8));
 
  //syntax
  //implicit retrun keyword (no need to write return for oneline in arrow fucnctn)
  //arguments should define in arrow function
 //this keyword diiference
 
+//function calling the other function
+const  cutfruit= function(fruit){
+    return fruit * 4;
+};
+const fruitprocessor = function(apples,oranges){
+    const applepice=cutfruit(apples);
+    const orangepice =cutfruit(oranges);
+    const  juice =`juices with ${applepice} apples and ${orangepice} oranges`;
+    return juice;
+} 
+console.log(fruitprocessor(2,5));   
+
+//function declaration
+function calAge(birthYear){
+    return 2037 - birthYear;
+}
+
+//function expression
+const calAge = function(birthYear){
+    return 2037- birthYear;
+}
+
+//arrow function
+const calAge = birthYear => 2037-birthYear;
