@@ -51,3 +51,32 @@ const calApmlitudeNew = function(t1,t2){
 }
 const ansNew =calApmlitudeNew(temperature,newtemp);
 console.log(ansNew);
+
+//Learnign debuging step by step
+
+const measureKelvin = function(){
+    const measurement = {
+        type:'temp',
+        unit:'celsius',
+        //fixing the bug
+        // value: Number(prompt('Degrees celsius :')),
+        value: 10,
+    };
+    //C fix the bug
+    //checking step by step
+    //B Find the bug
+     // console.log(measurement);
+    console.table(measurement); // to obtain table view key and value
+    // console.log(measurement.value);
+    // console.warn(measurement.value);
+    // console.error(measurement.value);
+
+    //A identify the bug
+    const kelvin = measurement.value + 273;
+    return kelvin;
+}
+//Identify bug
+console.log(measureKelvin());
+
+//use chrome debuuging to find the problems in your program
+//use breakPoint to stop the program and look out for fault
